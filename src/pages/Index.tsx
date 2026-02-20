@@ -183,10 +183,10 @@ const Index = () => {
             </p>
           </section>
 
-          {/* My Ask */}
+          {/* Referral */}
           <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
-              My Ask
+              Can You Refer Me?
             </h2>
             <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
               <p>

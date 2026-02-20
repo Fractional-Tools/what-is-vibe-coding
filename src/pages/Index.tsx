@@ -125,6 +125,26 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Won't Cover */}
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
+            <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
+              What We Won't Cover
+            </h2>
+            <p className="text-muted-foreground text-sm mb-4">
+              These are important topics, but outside the scope of this session.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Model Training", "Vector DBs", "Ethics of AI", "Job Risk for Developers"].map((term) => (
+                <span
+                  key={term}
+                  className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-muted-foreground line-through"
+                >
+                  {term}
+                </span>
+              ))}
+            </div>
+          </section>
+
           <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Prompt Along

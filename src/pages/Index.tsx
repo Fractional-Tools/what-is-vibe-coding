@@ -99,10 +99,10 @@ const Index = () => {
           {/* Prompt */}
           <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-              Your First Prompt
+              Prompt Along
             </h2>
             <p className="text-muted-foreground text-sm mb-5">
-              Paste this into Lovable to get started, or just watch.
+              These are the prompts I'll use during the session. I'll pause and explain how I think about things and why I prompt in a given order. If you want to build along with me, copy each prompt as we go.
             </p>
             <div className="bg-secondary rounded-md p-4 text-left relative">
               <p className="text-foreground text-xs leading-relaxed pr-8">

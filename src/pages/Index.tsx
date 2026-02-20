@@ -186,10 +186,10 @@ const Index = () => {
                   href="https://www.linkedin.com/in/stephansmithbc93/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="inline-flex text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
+                  <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="https://stephansmith.solutions/"

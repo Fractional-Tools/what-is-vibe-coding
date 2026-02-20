@@ -60,10 +60,11 @@ const Index = () => {
                 </p>
                 <ol className="divide-y divide-border">
                   {[
-                    { title: "Intros and goals", time: "5 min" },
+                    { title: "Intros & What is Vibe Coding?", time: "5 min" },
                     { title: "How I got here and what I do — framing", time: "10 min" },
                     { title: "We live vibe code an app", time: "25 min" },
-                    { title: "Next logical steps you can take", time: "10 min" },
+                    { title: "Common mistakes & gotchas", time: "5 min" },
+                    { title: "Tools & resources to keep going", time: "5 min" },
                     { title: "Questions and answers", time: "10 min" },
                   ].map((item, i) => (
                     <li key={i} className="flex items-baseline gap-4 py-2.5">

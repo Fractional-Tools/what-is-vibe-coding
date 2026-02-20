@@ -170,28 +170,21 @@ const Index = () => {
             </div>
           </section>
 
-          <section className="border border-border rounded-lg shadow-md px-5 py-6">
+          <section className="rounded-xl bg-gradient-to-br from-[hsl(48_100%_94%)] to-[hsl(40_90%_90%)] border border-[hsl(42_70%_80%)] shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Prompt Along
             </h2>
             <p className="text-muted-foreground text-sm mb-5">
               These are the prompts I'll use during the session. I'll pause and explain how I think about things and why I prompt in a given order. If you want to build along with me, copy each prompt as we go.
             </p>
-            <div className="bg-secondary rounded-md p-4 text-left relative">
-              <p className="text-foreground text-xs leading-relaxed pr-8">
-                {STARTER_PROMPT}
-              </p>
-              <button
-                onClick={handleCopyPrompt}
-                className="absolute top-3 right-3 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
-                aria-label="Copy prompt"
-              >
-                {copiedPrompt ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-              </button>
-            </div>
-            {copiedPrompt && (
-              <p className="text-xs text-muted-foreground mt-2">Copied!</p>
-            )}
+            <ol className="space-y-3">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <li key={n} className="flex items-center gap-3 bg-[hsl(48_60%_97%)] border border-[hsl(42_50%_85%)] rounded-md px-4 py-3">
+                  <span className="text-muted-foreground text-sm font-medium shrink-0">#{n}</span>
+                  <span className="text-muted-foreground text-sm italic flex-1">Visible when we start</span>
+                </li>
+              ))}
+            </ol>
           </section>
 
           {/* About */}

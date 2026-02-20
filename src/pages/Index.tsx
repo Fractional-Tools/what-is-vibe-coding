@@ -69,10 +69,13 @@ const Index = () => {
               </div>
               <div>
                 <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-                  Get Ready
+                  Prepare for the Session
                 </h2>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-1">
                   Sign up for a free Lovable account before the session so you can vibe along.
+                </p>
+                <p className="text-muted-foreground text-xs italic mb-4">
+                  This is optional — just watching is totally fine.
                 </p>
                 <div className="bg-[hsl(140_40%_93%)] rounded-md p-3 flex items-center gap-2">
                   <span className="flex-1 text-xs text-foreground truncate">

@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
+        body: ['Source Serif 4', 'serif'],
         heading: ['Source Serif 4', 'serif'],
       },
       colors: {

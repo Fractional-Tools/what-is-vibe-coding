@@ -1,6 +1,7 @@
 import stephanPhoto from "@/assets/stephan-smith.png";
 import { Copy, Check, ExternalLink, Linkedin } from "lucide-react";
 import { useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip";
 
 const AFFILIATE_LINK = "https://lovable.dev/invite/6NNQZW1";
 
@@ -114,13 +115,27 @@ const Index = () => {
               Terms We'll Cover
             </h2>
             <div className="flex flex-wrap gap-2">
-              {["Vibe Coding", "LLM", "Memory", "Scaling", "Co-building", "Bolt", "Yolo", "FUD", "Cursor", "Claude Code", "Warp"].map((term) => (
-                <span
-                  key={term}
-                  className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-foreground"
-                >
-                  {term}
-                </span>
+              {[
+                { term: "Vibe Coding", tip: "Building apps by describing what you want to AI" },
+                { term: "LLM", tip: "Large Language Model — the AI that powers tools like ChatGPT and Claude" },
+                { term: "Memory", tip: "How AI retains context across a conversation or project" },
+                { term: "Scaling", tip: "Growing your app from prototype to production" },
+                { term: "Co-building", tip: "Working alongside AI as a partner, not just a tool" },
+                { term: "Bolt", tip: "An AI-powered app builder similar to Lovable" },
+                { term: "Yolo", tip: "Auto-accepting AI suggestions without reviewing — risky but fast" },
+                { term: "FUD", tip: "Fear, Uncertainty, and Doubt — common reactions to new tech" },
+                { term: "Cursor", tip: "An AI-powered code editor for developers" },
+                { term: "Claude Code", tip: "Anthropic's CLI tool for coding with Claude" },
+                { term: "Warp", tip: "An AI-powered terminal for developers" },
+              ].map(({ term, tip }) => (
+                <Tooltip key={term}>
+                  <TooltipTrigger asChild>
+                    <span className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-foreground cursor-help">
+                      {term}
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent><p>{tip}</p></TooltipContent>
+                </Tooltip>
               ))}
             </div>
           </section>
@@ -134,13 +149,23 @@ const Index = () => {
               These are important topics, but outside the scope of this session.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Model Training", "Vector DBs", "Ethics of AI", "Job Risk for Developers"].map((term) => (
-                <span
-                  key={term}
-                  className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-muted-foreground line-through"
-                >
-                  {term}
-                </span>
+              {[
+                { term: "Model Training", tip: "Teaching AI models from scratch with custom data" },
+                { term: "Vector DBs", tip: "Databases optimized for storing and searching AI embeddings" },
+                { term: "Ethics of AI", tip: "Moral and societal implications of artificial intelligence" },
+                { term: "Job Risk for Developers", tip: "How AI may change the demand for traditional coding roles" },
+                { term: "MCPs", tip: "Model Context Protocol — a standard for connecting AI to external tools" },
+                { term: "OpenCrawl", tip: "Open-source web crawling for training data" },
+                { term: "Pinecone", tip: "A managed vector database service for AI applications" },
+              ].map(({ term, tip }) => (
+                <Tooltip key={term}>
+                  <TooltipTrigger asChild>
+                    <span className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-muted-foreground line-through cursor-help">
+                      {term}
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent><p>{tip}</p></TooltipContent>
+                </Tooltip>
               ))}
             </div>
           </section>

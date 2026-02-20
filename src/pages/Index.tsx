@@ -41,7 +41,7 @@ const Index = () => {
               <span className="text-5xl">🎯</span> <span className="text-xl">The Goal</span>
             </p>
             <p className="text-foreground text-lg leading-relaxed text-right flex-1">
-              Get you to the <em>aha</em> moment where you can see yourself building that app you always wanted.
+              Get you to the <em className="font-bold">aha</em> moment where you can see yourself building that app you always wanted.
             </p>
           </div>
         </header>

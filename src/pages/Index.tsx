@@ -2,7 +2,7 @@ import stephanPhoto from "@/assets/stephan-smith.png";
 import { Copy, Check, ExternalLink, Linkedin } from "lucide-react";
 import { useState } from "react";
 
-const AFFILIATE_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
+const AFFILIATE_LINK = "https://lovable.dev/invite/6NNQZW1";
 
 const STARTER_PROMPT = `Build me a simple landing page for a consulting business. Include a hero section with a headline, a short bio section with a photo, and a contact form. Use a clean, minimal design.`;
 

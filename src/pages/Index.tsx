@@ -41,84 +41,85 @@ const Index = () => {
 
           {/* Agenda */}
           <section className="border border-border rounded-lg shadow-sm px-5 py-6">
-            <h2 className="font-heading text-xl font-semibold text-foreground mb-6">
-              Agenda
-            </h2>
-            <ol className="space-y-3">
-              {[
-                "Intros and goals",
-                "How I got here and what I do — framing",
-                "We live vibe code an app",
-                "Next logical steps you can take",
-                "Questions and answers",
-              ].map((item, i) => (
-                <li key={i} className="flex items-baseline gap-4">
-                  <span className="text-muted-foreground text-sm font-medium shrink-0 w-5 text-right">{i + 1}</span>
-                  <span className="text-foreground text-sm">{item}</span>
-                </li>
-              ))}
-            </ol>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
+                  Agenda
+                </h2>
+                <ol className="space-y-3">
+                  {[
+                    "Intros and goals",
+                    "How I got here and what I do — framing",
+                    "We live vibe code an app",
+                    "Next logical steps you can take",
+                    "Questions and answers",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-baseline gap-4">
+                      <span className="text-muted-foreground text-sm font-medium shrink-0 w-5 text-right">{i + 1}</span>
+                      <span className="text-foreground text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div>
+                <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
+                  Get Ready
+                </h2>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Sign up for a free Lovable account before the session so you can vibe along.
+                </p>
+                <div className="bg-secondary rounded-md p-3 flex items-center gap-2">
+                  <span className="flex-1 text-xs text-foreground truncate">
+                    {AFFILIATE_LINK}
+                  </span>
+                  <button
+                    onClick={handleCopyLink}
+                    className="shrink-0 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+                    aria-label="Copy link"
+                  >
+                    {copiedLink ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                  <a
+                    href={AFFILIATE_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+                    aria-label="Open link"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+                {copiedLink && (
+                  <p className="text-xs text-muted-foreground mt-2">Link copied!</p>
+                )}
+              </div>
+            </div>
           </section>
 
-          {/* Get Ready + Prompt — two column on desktop */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <section className="border border-border rounded-lg shadow-sm px-5 py-6">
-              <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-                Get Ready
-              </h2>
-              <p className="text-muted-foreground text-sm mb-5">
-                Sign up for a free Lovable account so you can vibe along.
+          {/* Prompt */}
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+            <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
+              Your First Prompt
+            </h2>
+            <p className="text-muted-foreground text-sm mb-5">
+              Paste this into Lovable to get started, or just watch.
+            </p>
+            <div className="bg-secondary rounded-md p-4 text-left relative">
+              <p className="text-foreground text-xs leading-relaxed pr-8">
+                {STARTER_PROMPT}
               </p>
-              <div className="bg-secondary rounded-md p-3 flex items-center gap-2">
-                <span className="flex-1 text-xs text-foreground truncate">
-                  {AFFILIATE_LINK}
-                </span>
-                <button
-                  onClick={handleCopyLink}
-                  className="shrink-0 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
-                  aria-label="Copy link"
-                >
-                  {copiedLink ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-                <a
-                  href={AFFILIATE_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
-                  aria-label="Open link"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-              {copiedLink && (
-                <p className="text-xs text-muted-foreground mt-2">Link copied!</p>
-              )}
-            </section>
-
-            <section className="border border-border rounded-lg shadow-sm px-5 py-6">
-              <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-                Your First Prompt
-              </h2>
-              <p className="text-muted-foreground text-sm mb-5">
-                Paste this into Lovable to get started, or just watch.
-              </p>
-              <div className="bg-secondary rounded-md p-4 text-left relative">
-                <p className="text-foreground text-xs leading-relaxed pr-8">
-                  {STARTER_PROMPT}
-                </p>
-                <button
-                  onClick={handleCopyPrompt}
-                  className="absolute top-3 right-3 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
-                  aria-label="Copy prompt"
-                >
-                  {copiedPrompt ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-              </div>
-              {copiedPrompt && (
-                <p className="text-xs text-muted-foreground mt-2">Copied!</p>
-              )}
-            </section>
-          </div>
+              <button
+                onClick={handleCopyPrompt}
+                className="absolute top-3 right-3 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+                aria-label="Copy prompt"
+              >
+                {copiedPrompt ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+              </button>
+            </div>
+            {copiedPrompt && (
+              <p className="text-xs text-muted-foreground mt-2">Copied!</p>
+            )}
+          </section>
 
           {/* About */}
           <section className="border border-border rounded-lg shadow-sm px-5 py-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">

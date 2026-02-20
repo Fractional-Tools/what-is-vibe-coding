@@ -54,7 +54,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Loose outline of what we'll build together.
                 </p>
-                <ol className="space-y-3">
+                <ol className="divide-y divide-border">
                   {[
                     { title: "Intros and goals", time: "5 min" },
                     { title: "How I got here and what I do — framing", time: "10 min" },
@@ -62,7 +62,7 @@ const Index = () => {
                     { title: "Next logical steps you can take", time: "10 min" },
                     { title: "Questions and answers", time: "10 min" },
                   ].map((item, i) => (
-                    <li key={i} className="flex items-baseline gap-4">
+                    <li key={i} className="flex items-baseline gap-4 py-2.5">
                       <span className="text-muted-foreground text-sm font-medium shrink-0 w-5 text-right">{i + 1}</span>
                       <span className="text-foreground text-sm flex-1">{item.title}</span>
                       <span className="text-muted-foreground text-xs shrink-0">{item.time}</span>

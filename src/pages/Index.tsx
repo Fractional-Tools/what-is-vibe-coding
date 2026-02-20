@@ -135,6 +135,45 @@ const Index = () => {
             </a>
           </div>
       </section>
+
+      {/* Newsletter */}
+      <section className="border border-border rounded-lg px-6 py-12 text-center">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+            Newsletter
+          </h2>
+          <p className="text-muted-foreground mb-6 text-sm leading-relaxed max-w-lg mx-auto">
+            I write about the headspace and patterns I see in my fractional CTO work — how technology decisions compound, and what to do about it.
+          </p>
+          <a
+            href="https://lowcodecto.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Read the Newsletter →
+          </a>
+      </section>
+
+      {/* My Ask */}
+      <section className="border border-border rounded-lg px-6 py-12">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-4 text-center">
+            My Ask
+          </h2>
+          <div className="max-w-lg mx-auto space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              I have a superpower. I help companies cut their tech budget while giving the team perspective on their technology patterns.
+            </p>
+            <p>
+              I do this via a fixed-price, fixed-time package. I come in, work with the CFO — and maybe the CEO and tech lead — to cut tech spend.
+            </p>
+            <p className="text-foreground font-medium">
+              In my last 11 fractional CTO engagements, I've found companies overspend on cloud costs by 10×.
+            </p>
+            <p>
+              If you know someone who could use this, I'd appreciate the introduction.
+            </p>
+          </div>
+      </section>
       </div>
     </div>
   );

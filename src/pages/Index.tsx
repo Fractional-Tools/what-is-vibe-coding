@@ -204,7 +204,10 @@ const Index = () => {
             <div className="text-center sm:text-left">
               <h2 className="font-heading text-lg font-semibold text-foreground">Stephan Smith</h2>
               <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                Boston-based serial founder and fractional CTO. I help startups and SMBs make better technology decisions. Previously co-founded a company in the Techstars Boston cohort.
+                Boston-based serial founder and fractional CTO. 15 years as a hands-on CTO — then in 2022 I got into AI-assisted coding and drank the bug juice. I don't do primary coding anymore. I orchestrate AI, and it gives me 10–30× productivity gains.
+              </p>
+              <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                I help startups and SMBs make better technology decisions. Previously co-founded a company in the Techstars Boston cohort.
               </p>
               <div className="flex flex-wrap items-center gap-4 mt-3">
                 <a

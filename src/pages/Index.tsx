@@ -45,7 +45,7 @@ const Index = () => {
         <div className="space-y-6">
 
           {/* Agenda */}
-          <section className="border border-border rounded-lg shadow-sm px-8 py-10">
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-6">
               Agenda
             </h2>
@@ -67,7 +67,7 @@ const Index = () => {
 
           {/* Get Ready + Prompt — two column on desktop */}
           <div className="grid md:grid-cols-2 gap-6">
-            <section className="border border-border rounded-lg shadow-sm px-8 py-10">
+            <section className="border border-border rounded-lg shadow-sm px-5 py-6">
               <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
                 Get Ready
               </h2>
@@ -100,7 +100,7 @@ const Index = () => {
               )}
             </section>
 
-            <section className="border border-border rounded-lg shadow-sm px-8 py-10">
+            <section className="border border-border rounded-lg shadow-sm px-5 py-6">
               <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
                 Your First Prompt
               </h2>
@@ -126,7 +126,7 @@ const Index = () => {
           </div>
 
           {/* About */}
-          <section className="border border-border rounded-lg shadow-sm px-8 py-10 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
             <img
               src={stephanPhoto}
               alt="Stephan Smith"
@@ -150,7 +150,7 @@ const Index = () => {
           </section>
 
           {/* Newsletter */}
-          <section className="border border-border rounded-lg shadow-sm px-8 py-10">
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Newsletter
             </h2>
@@ -181,7 +181,7 @@ const Index = () => {
           </section>
 
           {/* My Ask */}
-          <section className="border border-border rounded-lg shadow-sm px-8 py-10">
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
               My Ask
             </h2>

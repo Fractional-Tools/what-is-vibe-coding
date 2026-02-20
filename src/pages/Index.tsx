@@ -150,7 +150,7 @@ const Index = () => {
               Newsletter
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              I write about Founder Mindset, Economics of Code, and The Wrong-Right Way — inspired by thinkers like Paul Krugman and Chris Voss.{" "}
+              I write about Founder Mindset, Economics of Code, and The Wrong-Right Way — inspired by thinkers like <a href="https://paulkrugman.substack.com/" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:opacity-80 transition-opacity">Paul Krugman</a> and Chris Voss.{" "}
               <a
                 href="https://lowcodecto.com/"
                 target="_blank"

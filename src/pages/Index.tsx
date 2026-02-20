@@ -35,6 +35,27 @@ const Index = () => {
           </p>
       </section>
 
+      {/* Agenda */}
+      <section className="border border-border rounded-lg px-6 py-12">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-6 text-center">
+            Agenda
+          </h2>
+          <ol className="space-y-4 max-w-md mx-auto">
+            {[
+              "Intros and goals",
+              "How I got here and what I do — framing",
+              "We live vibe code an app",
+              "Next logical steps you can take",
+              "Questions and answers",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="text-muted-foreground font-heading text-lg font-semibold shrink-0 w-6 text-right">{i + 1}.</span>
+                <span className="text-foreground text-sm leading-relaxed pt-0.5">{item}</span>
+              </li>
+            ))}
+          </ol>
+      </section>
+
       <section className="border border-border rounded-lg px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Get Ready

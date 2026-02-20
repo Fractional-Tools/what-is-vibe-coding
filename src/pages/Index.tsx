@@ -36,7 +36,7 @@ const Index = () => {
       </section>
 
       {/* Agenda */}
-      <section className="border border-border rounded-lg px-6 py-12">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-6 text-center">
             Agenda
           </h2>
@@ -56,7 +56,7 @@ const Index = () => {
           </ol>
       </section>
 
-      <section className="border border-border rounded-lg px-6 py-12 text-center">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Get Ready
           </h2>
@@ -89,7 +89,7 @@ const Index = () => {
           )}
       </section>
 
-      <section className="border border-border rounded-lg px-6 py-12 text-center">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Your First Prompt
           </h2>
@@ -113,7 +113,7 @@ const Index = () => {
           )}
       </section>
 
-      <section className="border border-border rounded-lg px-6 py-12 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           <img
             src={stephanPhoto}
             alt="Stephan Smith"
@@ -137,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="border border-border rounded-lg px-6 py-12 text-center">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Newsletter
           </h2>
@@ -155,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* My Ask */}
-      <section className="border border-border rounded-lg px-6 py-12">
+      <section className="border border-border rounded-lg shadow-md px-6 py-12">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-4 text-center">
             My Ask
           </h2>

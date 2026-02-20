@@ -48,9 +48,12 @@ const Index = () => {
           <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <div className="grid md:grid-cols-[1fr_40%] gap-6">
               <div>
-                <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
+                <h2 className="font-heading text-xl font-semibold text-foreground mb-1">
                   Agenda
                 </h2>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Loose outline of what we'll build together.
+                </p>
                 <ol className="space-y-3">
                   {[
                     { title: "Intros and goals", time: "5 min" },

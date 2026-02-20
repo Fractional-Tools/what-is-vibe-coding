@@ -1,5 +1,5 @@
 import stephanPhoto from "@/assets/stephan-smith.png";
-import { Copy, Check, Linkedin } from "lucide-react";
+import { Copy, Check, ExternalLink, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 const AFFILIATE_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
@@ -7,12 +7,19 @@ const AFFILIATE_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
 const STARTER_PROMPT = `Build me a simple landing page for a consulting business. Include a hero section with a headline, a short bio section with a photo, and a contact form. Use a clean, minimal design.`;
 
 const Index = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
-  const handleCopy = () => {
+  const handleCopyPrompt = () => {
     navigator.clipboard.writeText(STARTER_PROMPT);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2000);
+  };
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(AFFILIATE_LINK);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
   };
 
   return (
@@ -29,8 +36,71 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Bio */}
+      {/* Get Ready */}
       <section className="border-b border-border">
+        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+            Get Ready
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Sign up for a free Lovable account before the session so you can vibe along.
+          </p>
+          <div className="bg-secondary rounded-lg p-4 flex items-center gap-3 max-w-lg mx-auto">
+            <span className="flex-1 text-sm text-foreground truncate text-left">
+              {AFFILIATE_LINK}
+            </span>
+            <button
+              onClick={handleCopyLink}
+              className="shrink-0 p-2 rounded-md hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Copy link"
+            >
+              {copiedLink ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            </button>
+            <a
+              href={AFFILIATE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 p-2 rounded-md hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Open link"
+            >
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+          {copiedLink && (
+            <p className="text-sm text-muted-foreground mt-3">Link copied!</p>
+          )}
+        </div>
+      </section>
+
+      {/* Starter Prompt */}
+      <section className="border-b border-border">
+        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+            Your First Prompt
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Once you're in Lovable, paste this prompt to get started. Or just follow along and watch.
+          </p>
+          <div className="bg-secondary rounded-lg p-5 text-left relative">
+            <p className="text-foreground text-sm leading-relaxed pr-12">
+              {STARTER_PROMPT}
+            </p>
+            <button
+              onClick={handleCopyPrompt}
+              className="absolute top-4 right-4 p-2 rounded-md hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Copy prompt"
+            >
+              {copiedPrompt ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            </button>
+          </div>
+          {copiedPrompt && (
+            <p className="text-sm text-muted-foreground mt-3">Copied to clipboard!</p>
+          )}
+        </div>
+      </section>
+
+      {/* Bio — moved to bottom */}
+      <section>
         <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           <img
             src={stephanPhoto}
@@ -52,53 +122,6 @@ const Index = () => {
               LinkedIn
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Get Ready */}
-      <section className="border-b border-border">
-        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
-          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
-            Get Ready
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Sign up for a free Lovable account before the session so you can vibe along.
-          </p>
-          <a
-            href={AFFILIATE_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            Create Your Free Account →
-          </a>
-        </div>
-      </section>
-
-      {/* Starter Prompt */}
-      <section>
-        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
-          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
-            Your First Prompt
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Once you're in Lovable, paste this prompt to get started. Or just follow along and watch.
-          </p>
-          <div className="bg-secondary rounded-lg p-5 text-left relative">
-            <p className="text-foreground text-sm leading-relaxed pr-12">
-              {STARTER_PROMPT}
-            </p>
-            <button
-              onClick={handleCopy}
-              className="absolute top-4 right-4 p-2 rounded-md hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
-              aria-label="Copy prompt"
-            >
-              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-            </button>
-          </div>
-          {copied && (
-            <p className="text-sm text-muted-foreground mt-3">Copied to clipboard!</p>
-          )}
         </div>
       </section>
     </div>

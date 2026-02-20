@@ -24,21 +24,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <div className="max-w-2xl mx-auto px-6 py-10 space-y-8">
       {/* Hero */}
-      <section className="border-b border-border">
-        <div className="max-w-2xl mx-auto px-6 py-20 md:py-28 text-center">
+      <section className="border border-border rounded-lg px-6 py-16 md:py-20 text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight">
             What is Vibe Coding?
           </h1>
           <p className="mt-4 text-muted-foreground text-lg">
             A live session where we build a real app together using AI. No setup. No experience needed.
           </p>
-        </div>
       </section>
 
-      {/* Get Ready */}
-      <section className="border-b border-border">
-        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+      <section className="border border-border rounded-lg px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Get Ready
           </h2>
@@ -69,12 +66,9 @@ const Index = () => {
           {copiedLink && (
             <p className="text-sm text-muted-foreground mt-3">Link copied!</p>
           )}
-        </div>
       </section>
 
-      {/* Starter Prompt */}
-      <section className="border-b border-border">
-        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+      <section className="border border-border rounded-lg px-6 py-12 text-center">
           <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
             Your First Prompt
           </h2>
@@ -96,12 +90,9 @@ const Index = () => {
           {copiedPrompt && (
             <p className="text-sm text-muted-foreground mt-3">Copied to clipboard!</p>
           )}
-        </div>
       </section>
 
-      {/* Bio — moved to bottom */}
-      <section>
-        <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+      <section className="border border-border rounded-lg px-6 py-12 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
           <img
             src={stephanPhoto}
             alt="Stephan Smith"
@@ -122,8 +113,8 @@ const Index = () => {
               LinkedIn
             </a>
           </div>
-        </div>
       </section>
+      </div>
     </div>
   );
 };

@@ -1,134 +1,106 @@
-import heroBanner from "@/assets/hero-banner.jpg";
-import { Copy, Check, Eye, Code2, Sparkles } from "lucide-react";
+import stephanPhoto from "@/assets/stephan-smith.png";
+import { Copy, Check, Linkedin } from "lucide-react";
 import { useState } from "react";
 
-const PROMO_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
+const AFFILIATE_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
+
+const STARTER_PROMPT = `Build me a simple landing page for a consulting business. Include a hero section with a headline, a short bio section with a photo, and a contact form. Use a clean, minimal design.`;
 
 const Index = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(PROMO_LINK);
+    navigator.clipboard.writeText(STARTER_PROMPT);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroBanner}
-            alt="Vibe Coding Class Workshop banner with floating code"
-            className="w-full h-full object-cover opacity-60"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-        </div>
-
-        <div className="relative z-10 container mx-auto px-6 py-24 md:py-36 text-center">
-          <p className="font-mono text-primary text-sm tracking-widest uppercase mb-4 animate-pulse-glow">
-            Live Workshop
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold font-display mb-6 leading-tight">
-            <span className="gradient-text">Vibe Coding</span>
-            <br />
-            <span className="text-foreground">Class</span>
+      {/* Hero */}
+      <section className="border-b border-border">
+        <div className="max-w-2xl mx-auto px-6 py-20 md:py-28 text-center">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight">
+            What is Vibe Coding?
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Build real apps live using AI-powered tools. No experience needed — just vibes.
+          <p className="mt-4 text-muted-foreground text-lg">
+            A live session where we build a real app together using AI. No setup. No experience needed.
+          </p>
+        </div>
+      </section>
+
+      {/* Bio */}
+      <section className="border-b border-border">
+        <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+          <img
+            src={stephanPhoto}
+            alt="Stephan Smith"
+            className="w-24 h-24 rounded-full object-cover shrink-0"
+          />
+          <div className="text-center sm:text-left">
+            <h2 className="font-heading text-xl font-semibold text-foreground">Stephan Smith</h2>
+            <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
+              Boston-based serial founder and fractional CTO. I help startups and SMBs make better technology decisions. Previously co-founded a company in the Techstars Boston cohort.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/stephansmithbc93/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Ready */}
+      <section className="border-b border-border">
+        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+            Get Ready
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Sign up for a free Lovable account before the session so you can vibe along.
           </p>
           <a
-            href="#join"
-            className="inline-block bg-primary text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity box-glow"
+            href={AFFILIATE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Join the Session
+            Create Your Free Account →
           </a>
         </div>
       </section>
 
-      {/* Promo Code Section */}
-      <section className="py-20 px-6" id="promo">
-        <div className="container mx-auto max-w-2xl text-center">
-          <div className="bg-card border border-border rounded-2xl p-8 md:p-12 box-glow">
-            <Sparkles className="w-10 h-10 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold font-display mb-3 text-foreground">
-              Get Started with Lovable
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Use my promo link below to sign up and get bonus credits to start building.
-            </p>
-            <div className="flex items-center gap-3 bg-muted rounded-lg p-3 max-w-lg mx-auto">
-              <code className="flex-1 text-primary text-sm font-mono truncate text-left">
-                {PROMO_LINK}
-              </code>
-              <button
-                onClick={handleCopy}
-                className="shrink-0 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-4 h-4" /> Copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4" /> Copy
-                  </>
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Participate Section */}
-      <section className="py-20 px-6" id="join">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-center mb-4 text-foreground">
-            How to Participate
+      {/* Starter Prompt */}
+      <section>
+        <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-heading text-2xl font-semibold text-foreground mb-3">
+            Your First Prompt
           </h2>
-          <p className="text-muted-foreground text-center mb-12 text-lg">
-            Choose your own adventure — code along or just hang out.
+          <p className="text-muted-foreground mb-6">
+            Once you're in Lovable, paste this prompt to get started. Or just follow along and watch.
           </p>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Option 1: Vibe Along */}
-            <div className="bg-card border border-border rounded-2xl p-8 hover:border-primary/50 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <Code2 className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold font-display text-foreground mb-3">
-                🎧 Vibe Along With Me
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Follow along in real time! I'll share my prompts so you can build the same app
-                on your own Lovable account. Great for hands-on learners.
-              </p>
-            </div>
-
-            {/* Option 2: Just Watch */}
-            <div className="bg-card border border-border rounded-2xl p-8 hover:border-secondary/50 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary/20 transition-colors">
-                <Eye className="w-6 h-6 text-secondary" />
-              </div>
-              <h3 className="text-xl font-bold font-display text-foreground mb-3">
-                👀 Just Watch
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Prefer to sit back? No problem. Watch the magic happen live and pick up tips,
-                tricks, and inspiration for your own projects later.
-              </p>
-            </div>
+          <div className="bg-secondary rounded-lg p-5 text-left relative">
+            <p className="text-foreground text-sm leading-relaxed pr-12">
+              {STARTER_PROMPT}
+            </p>
+            <button
+              onClick={handleCopy}
+              className="absolute top-4 right-4 p-2 rounded-md hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+              aria-label="Copy prompt"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            </button>
           </div>
+          {copied && (
+            <p className="text-sm text-muted-foreground mt-3">Copied to clipboard!</p>
+          )}
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border py-8 px-6 text-center">
-        <p className="text-muted-foreground text-sm font-mono">
-          Built with vibes ✨ Powered by Lovable
-        </p>
-      </footer>
     </div>
   );
 };

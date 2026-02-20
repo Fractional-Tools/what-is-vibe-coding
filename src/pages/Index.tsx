@@ -44,7 +44,7 @@ const Index = () => {
 
           {/* Agenda */}
           <section className="border border-border rounded-lg shadow-sm px-5 py-6">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-[1fr_40%] gap-6">
               <div>
                 <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
                   Agenda

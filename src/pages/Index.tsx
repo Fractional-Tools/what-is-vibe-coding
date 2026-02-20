@@ -5,17 +5,23 @@ import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/comp
 
 const AFFILIATE_LINK = "https://lovable.dev/invite/6NNQZW1";
 
-const STARTER_PROMPT = `Build me a simple landing page for a consulting business. Include a hero section with a headline, a short bio section with a photo, and a contact form. Use a clean, minimal design.`;
+const PROMPTS = [
+  { label: "The Foundation", text: "Build a habit tracker app. I want to be able to add habits with a name, mark them as complete each day with a checkbox, and see my current streak for each habit. Show a progress bar at the top that fills up based on how many habits I've completed today." },
+  { label: "Header & Branding", text: "Set the header to say 'Daily Wins' with a trophy emoji. Add a subtitle underneath that says 'Small steps, big changes.' Make the header sticky at the top of the page." },
+  { label: "Theme Toggle", text: "Add a light/dark mode toggle button in the top right corner of the header. Default to dark mode. Make sure all the colors look good in both modes." },
+  { label: "Persistence", text: "Save all habit data to localStorage so that when I refresh the page, my habits and their completion status are preserved. Also save the user's light/dark mode preference." },
+  { label: "Celebration", text: "When I complete 5 habits in a single day, show a fullscreen fireworks celebration animation with confetti and a message that says '🔥 You're on fire! All habits crushed!' Add a dismiss button to close it." },
+];
 
 
 const Index = () => {
-  const [copiedPrompt, setCopiedPrompt] = useState(false);
+  const [copiedPrompt, setCopiedPrompt] = useState<number | null>(null);
   const [copiedLink, setCopiedLink] = useState(false);
 
-  const handleCopyPrompt = () => {
-    navigator.clipboard.writeText(STARTER_PROMPT);
-    setCopiedPrompt(true);
-    setTimeout(() => setCopiedPrompt(false), 2000);
+  const handleCopyPrompt = (index: number) => {
+    navigator.clipboard.writeText(PROMPTS[index].text);
+    setCopiedPrompt(index);
+    setTimeout(() => setCopiedPrompt(null), 2000);
   };
 
   const handleCopyLink = () => {
@@ -182,10 +188,20 @@ const Index = () => {
               These are the prompts I'll use during the session. I'll pause and explain how I think about things and why I prompt in a given order. If you want to build along with me, copy each prompt as we go.
             </p>
             <ol className="space-y-3">
-              {[1, 2, 3, 4, 5].map((n) => (
-                <li key={n} className="flex items-center gap-3 bg-[hsl(48_60%_97%)] border border-[hsl(42_50%_85%)] rounded-md px-4 py-3">
-                  <span className="text-muted-foreground text-sm font-medium shrink-0">#{n}</span>
-                  <span className="text-muted-foreground text-sm italic flex-1">Visible when we start</span>
+              {PROMPTS.map((prompt, i) => (
+                <li key={i} className="bg-[hsl(48_60%_97%)] border border-[hsl(42_50%_85%)] rounded-md px-4 py-3">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-muted-foreground text-sm font-bold shrink-0">#{i + 1}</span>
+                    <span className="text-foreground text-sm font-semibold flex-1">{prompt.label}</span>
+                    <button
+                      onClick={() => handleCopyPrompt(i)}
+                      className="shrink-0 p-1.5 rounded hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
+                      aria-label={`Copy prompt ${i + 1}`}
+                    >
+                      {copiedPrompt === i ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+                  <p className="text-muted-foreground text-xs leading-relaxed pl-8">{prompt.text}</p>
                 </li>
               ))}
             </ol>

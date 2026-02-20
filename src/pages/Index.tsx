@@ -35,6 +35,9 @@ const Index = () => {
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
             A live session where we build a real app together using AI. No setup. No experience needed.
           </p>
+          <p className="mt-3 text-foreground text-sm max-w-lg mx-auto leading-relaxed font-medium">
+            The goal: get you to the aha moment where you can see yourself building that app you always wanted.
+          </p>
         </header>
 
         <div className="space-y-6">

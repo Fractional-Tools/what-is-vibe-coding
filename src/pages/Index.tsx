@@ -106,7 +106,7 @@ const Index = () => {
               Terms We'll Cover
             </h2>
             <div className="flex flex-wrap gap-2">
-              {["Vibe Coding", "LLM", "Memory", "Scaling", "Co-building"].map((term) => (
+              {["Vibe Coding", "LLM", "Memory", "Scaling", "Co-building", "Bolt", "Yolo", "FUD", "Cursor", "Claude Code", "Warp"].map((term) => (
                 <span
                   key={term}
                   className="text-sm px-3 py-1.5 rounded-full border border-border text-foreground"

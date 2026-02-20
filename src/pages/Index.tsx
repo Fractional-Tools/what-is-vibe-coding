@@ -262,7 +262,7 @@ const Index = () => {
           {/* Work With Me */}
           <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-              Work With Me
+              Fractional Co-builder
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
               I run classes on vibe coding and do co-build sessions where I act as a fractional co-founder — for people who want to build it themselves but want someone to help them stay focused and moving.

@@ -109,7 +109,7 @@ const Index = () => {
               {["Vibe Coding", "LLM", "Memory", "Scaling", "Co-building", "Bolt", "Yolo", "FUD", "Cursor", "Claude Code", "Warp"].map((term) => (
                 <span
                   key={term}
-                  className="text-sm px-3 py-1.5 rounded-full border border-border text-foreground"
+                  className="text-xs font-medium px-2.5 py-1 rounded-md bg-secondary text-foreground"
                 >
                   {term}
                 </span>

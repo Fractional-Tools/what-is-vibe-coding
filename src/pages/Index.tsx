@@ -74,7 +74,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Sign up for a free Lovable account before the session so you can vibe along.
                 </p>
-                <div className="bg-secondary rounded-md p-3 flex items-center gap-2">
+                <div className="bg-[hsl(140_40%_93%)] rounded-md p-3 flex items-center gap-2">
                   <span className="flex-1 text-xs text-foreground truncate">
                     {AFFILIATE_LINK}
                   </span>

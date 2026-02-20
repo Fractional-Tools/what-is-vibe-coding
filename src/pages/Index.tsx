@@ -43,7 +43,7 @@ const Index = () => {
         <div className="space-y-6">
 
           {/* Agenda */}
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <div className="grid md:grid-cols-[1fr_40%] gap-6">
               <div>
                 <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
@@ -101,7 +101,7 @@ const Index = () => {
           </section>
 
           {/* Terms */}
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
               Terms We'll Cover
             </h2>
@@ -117,7 +117,7 @@ const Index = () => {
             </div>
           </section>
 
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Prompt Along
             </h2>
@@ -142,7 +142,7 @@ const Index = () => {
           </section>
 
           {/* About */}
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
             <img
               src={stephanPhoto}
               alt="Stephan Smith"
@@ -177,7 +177,7 @@ const Index = () => {
           </section>
 
           {/* Newsletter */}
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Newsletter
             </h2>
@@ -195,7 +195,7 @@ const Index = () => {
           </section>
 
           {/* Referral */}
-          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
               Can You Refer Me?
             </h2>

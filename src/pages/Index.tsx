@@ -51,15 +51,16 @@ const Index = () => {
                 </h2>
                 <ol className="space-y-3">
                   {[
-                    "Intros and goals",
-                    "How I got here and what I do — framing",
-                    "We live vibe code an app",
-                    "Next logical steps you can take",
-                    "Questions and answers",
+                    { title: "Intros and goals", time: "5 min" },
+                    { title: "How I got here and what I do — framing", time: "10 min" },
+                    { title: "We live vibe code an app", time: "25 min" },
+                    { title: "Next logical steps you can take", time: "10 min" },
+                    { title: "Questions and answers", time: "10 min" },
                   ].map((item, i) => (
                     <li key={i} className="flex items-baseline gap-4">
                       <span className="text-muted-foreground text-sm font-medium shrink-0 w-5 text-right">{i + 1}</span>
-                      <span className="text-foreground text-sm">{item}</span>
+                      <span className="text-foreground text-sm flex-1">{item.title}</span>
+                      <span className="text-muted-foreground text-xs shrink-0">{item.time}</span>
                     </li>
                   ))}
                 </ol>

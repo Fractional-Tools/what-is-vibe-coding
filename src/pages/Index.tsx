@@ -153,15 +153,26 @@ const Index = () => {
               <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
                 Boston-based serial founder and fractional CTO. I help startups and SMBs make better technology decisions. Previously co-founded a company in the Techstars Boston cohort.
               </p>
-              <a
-                href="https://www.linkedin.com/in/stephansmithbc93/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 mt-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
+              <div className="flex flex-wrap items-center gap-4 mt-3">
+                <a
+                  href="https://www.linkedin.com/in/stephansmithbc93/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+                <a
+                  href="https://stephansmith.solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  stephansmith.solutions
+                </a>
+              </div>
             </div>
           </section>
 

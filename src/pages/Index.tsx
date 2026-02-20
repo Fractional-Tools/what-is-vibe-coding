@@ -35,7 +35,7 @@ const Index = () => {
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
             A live session where we build a real app together using AI. No setup. No experience needed.
           </p>
-          <div className="mt-8 mx-auto max-w-lg rounded-xl bg-gradient-to-br from-[hsl(48_100%_92%)] to-[hsl(40_100%_88%)] border border-[hsl(42_80%_75%)] shadow-lg px-8 py-6 text-center">
+          <div className="mt-8 mx-auto max-w-xl rounded-xl bg-gradient-to-br from-[hsl(48_100%_92%)] to-[hsl(40_100%_88%)] border border-[hsl(42_80%_75%)] shadow-lg px-8 py-6 text-center">
             <p className="text-foreground text-base font-semibold leading-relaxed tracking-tight">
               🎯 The goal: get you to the <em>aha</em> moment where you can see yourself building that app you always wanted.
             </p>

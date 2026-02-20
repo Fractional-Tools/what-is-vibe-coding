@@ -250,6 +250,15 @@ const Index = () => {
             </p>
           </section>
 
+          <section className="border border-border rounded-lg shadow-md px-5 py-6">
+            <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
+              Can You Refer Me?
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I help companies cut their tech budget via a fixed-price, fixed-time package — working with the CFO, CEO, and tech lead to find savings. <span className="text-foreground font-medium">In my last 11 engagements, I've found companies overspend on cloud costs by 10×.</span> If you know someone who could use this, I'd appreciate the introduction.
+            </p>
+          </section>
+
           {/* Work With Me */}
           <section className="border border-border rounded-lg shadow-md px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
@@ -257,15 +266,6 @@ const Index = () => {
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
               I run classes on vibe coding and do co-build sessions where I act as a fractional co-founder — for people who want to build it themselves but want someone to help them stay focused and moving.
-            </p>
-          </section>
-
-          <section className="border border-border rounded-lg shadow-md px-5 py-6">
-            <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
-              Can You Refer Me?
-            </h2>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              I help companies cut their tech budget via a fixed-price, fixed-time package — working with the CFO, CEO, and tech lead to find savings. <span className="text-foreground font-medium">In my last 11 engagements, I've found companies overspend on cloud costs by 10×.</span> If you know someone who could use this, I'd appreciate the introduction.
             </p>
           </section>
 

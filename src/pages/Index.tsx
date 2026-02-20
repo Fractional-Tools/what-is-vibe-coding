@@ -100,7 +100,23 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Prompt */}
+          {/* Terms */}
+          <section className="border border-border rounded-lg shadow-sm px-5 py-6">
+            <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
+              Terms We'll Cover
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {["Vibe Coding", "LLM", "Memory", "Scaling", "Co-building"].map((term) => (
+                <span
+                  key={term}
+                  className="text-sm px-3 py-1.5 rounded-full border border-border text-foreground"
+                >
+                  {term}
+                </span>
+              ))}
+            </div>
+          </section>
+
           <section className="border border-border rounded-lg shadow-sm px-5 py-6">
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Prompt Along

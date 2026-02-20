@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Source Serif 4', 'serif'],
-        heading: ['Source Serif 4', 'serif'],
+        body: ['DM Sans', 'sans-serif'],
+        heading: ['DM Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

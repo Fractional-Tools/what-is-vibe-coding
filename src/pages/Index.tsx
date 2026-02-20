@@ -199,20 +199,9 @@ const Index = () => {
             <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
               Can You Refer Me?
             </h2>
-            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-              <p>
-                I have a superpower. I help companies cut their tech budget while giving the team perspective on their technology patterns.
-              </p>
-              <p>
-                I do this via a fixed-price, fixed-time package. I come in, work with the CFO — and maybe the CEO and tech lead — to cut tech spend.
-              </p>
-              <p className="text-foreground font-medium text-base">
-                In my last 11 fractional CTO engagements, I've found companies overspend on cloud costs by 10×.
-              </p>
-              <p>
-                If you know someone who could use this, I'd appreciate the introduction.
-              </p>
-            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I help companies cut their tech budget via a fixed-price, fixed-time package — working with the CFO, CEO, and tech lead to find savings. <span className="text-foreground font-medium">In my last 11 engagements, I've found companies overspend on cloud costs by 10×.</span> If you know someone who could use this, I'd appreciate the introduction.
+            </p>
           </section>
 
         </div>

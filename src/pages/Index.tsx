@@ -6,11 +6,6 @@ const AFFILIATE_LINK = "https://lovable.dev?ref=YOUR_PROMO_CODE";
 
 const STARTER_PROMPT = `Build me a simple landing page for a consulting business. Include a hero section with a headline, a short bio section with a photo, and a contact form. Use a clean, minimal design.`;
 
-const TOPICS = [
-  { label: "Founder Mindset", href: "https://lowcodecto.com/t/founder-mindset" },
-  { label: "Economics of Code", href: "https://lowcodecto.com/t/economics-of-code" },
-  { label: "The Wrong-Right Way", href: "https://lowcodecto.com/t/the-wrong-right-way" },
-];
 
 const Index = () => {
   const [copiedPrompt, setCopiedPrompt] = useState(false);
@@ -154,30 +149,17 @@ const Index = () => {
             <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
               Newsletter
             </h2>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-              I write about the headspace and patterns I see in my fractional CTO work — inspired by thinkers like Paul Krugman on economics and Chris Voss on negotiation. How technology decisions compound, and what to do about it.
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              I write about Founder Mindset, Economics of Code, and The Wrong-Right Way — inspired by thinkers like Paul Krugman and Chris Voss.{" "}
+              <a
+                href="https://lowcodecto.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline hover:opacity-80 transition-opacity"
+              >
+                Read the newsletter →
+              </a>
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {TOPICS.map((topic) => (
-                <a
-                  key={topic.label}
-                  href={topic.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-medium px-3 py-1.5 rounded-full border border-border text-foreground hover:bg-secondary transition-colors"
-                >
-                  {topic.label}
-                </a>
-              ))}
-            </div>
-            <a
-              href="https://lowcodecto.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
-            >
-              Read the Newsletter →
-            </a>
           </section>
 
           {/* My Ask */}
